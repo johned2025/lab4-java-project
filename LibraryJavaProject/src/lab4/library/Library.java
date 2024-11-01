@@ -13,7 +13,7 @@ public class Library {
 	private ArrayList<Book> catalog;
 	
 	private ArrayList<Member> members;
-	private ArrayList<Book> availableBooks;
+	
 	
 	
 	// DONE: implement functionality of Member class
@@ -27,11 +27,9 @@ public class Library {
 	public void addBook(Book book) {
 		catalog.add(book);
 	}
-	public void availableBooks() {
-		for(Book book: catalog) {
-			if(book.getAvailability()) {
-				availableBooks.add(book);
-			}
-		}
+	public void addBook(String bookTitle) {
+		
+		catalog.add(new Book(bookTitle));
 	}
+	
 }
