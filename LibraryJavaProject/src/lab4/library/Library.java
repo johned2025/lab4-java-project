@@ -24,6 +24,9 @@ public class Library {
 	public void addMembers(Member member) {
 		members.add(member);
 	}
+	public void addMembers(String memberName) {
+		members.add(new Member(memberName);
+	}
 	public void addBook(Book book) {
 		catalog.add(book);
 	}
@@ -31,5 +34,6 @@ public class Library {
 		
 		catalog.add(new Book(bookTitle));
 	}
+	
 	
 }
