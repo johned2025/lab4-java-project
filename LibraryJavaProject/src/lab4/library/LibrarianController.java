@@ -9,11 +9,12 @@ public class LibrarianController {
 	// TODO: implement functionality of Member class
 	Library library = new Library();
 	
-	public void addBookToCatalog(Book book) {
-		
+	public void addBookToCatalog(Book book) { //adds an existing book
+		library.addBook(book);
 	}
-	public void borrowBook(Book book) {
-		for(Book b: library()
+	public void addBookToCatalog(String bookTitle) { //creates and adds a new book
+		library.addBook(bookTitle);
 	}
+	
 
 }
