@@ -19,13 +19,13 @@ public class Library {
 	// DONE: implement functionality of Member class
 	public Library() {
 		catalog = new ArrayList<>();
-		members= new ArrayList<>();
+		members = new ArrayList<>();
 	}
 	public void addMembers(Member member) {
 		members.add(member);
 	}
 	public void addMembers(String memberName) {
-		members.add(new Member(memberName);
+		members.add(new Member(memberName));
 	}
 	public void addBook(Book book) {
 		catalog.add(book);

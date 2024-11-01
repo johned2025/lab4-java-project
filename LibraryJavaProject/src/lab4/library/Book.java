@@ -10,7 +10,7 @@ public class Book {
 	
 	public Book(String title) {
 		this.title = title;
-		isAvailable = true;
+		this.isAvailable = true;
 	}
 	
 	// TODO: implement Book functionality 
