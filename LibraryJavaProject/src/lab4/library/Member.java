@@ -3,18 +3,19 @@ package lab4.library;
 import java.util.ArrayList;
 
 public class Member {
-
+	public int id = 0;
 	// GRASP Principle: Information Expert and Low Coupling
 	// Can borrow and return books.
 	private int memberID;
 	private String name;
-	private ArrayList<String> borrowedBooks;
+	private ArrayList<Book> borrowedBooks;
 	// private borrowedbBooks TODO: implement collection of borrowed books
 	// TODO: implement functionality of Member class
-	public Member(String name, int memberID) {
+	public Member(String name) {
 		this.name = name;
-		this.memberID = memberID;
+		this.memberID = id;
 		this.borrowedBooks = new ArrayList<>();
+		id++;
 	}
 	
 	public int getMemberID(){
@@ -23,7 +24,7 @@ public class Member {
 	public String getName(){
 		return name;
 	}
-	public ArrayList<String> getborrowedBooks(){
+	public ArrayList<Book> getborrowedBooks(){
 		return borrowedBooks;
 	}
 	public void borrowBook(Book book) {
