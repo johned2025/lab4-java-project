@@ -27,9 +27,16 @@ public class Member {
 	public ArrayList<Book> getborrowedBooks(){
 		return borrowedBooks;
 	}
-	public void borrowBook(Book book) {
-		borrowedBooks.add(book);
-		System.out.println(name + " has borrowed " + book.getTitle());
+	public boolean borrowBook(Book book) {
+		if(book.getAvailability()) { /// John added this condition for borrowing a book
+			borrowedBooks.add(book);
+			System.out.println(name + " has borrowed " + book.getTitle());
+			return true;
+		}else {
+			System.out.println("** Sorry "+this.name+" "+book.getTitle()+" is not available");
+			return false;
+		}
+		
 	}
 	public void returnBook(Book book) {
         if (borrowedBooks.remove(book)) {
